@@ -13,9 +13,12 @@ if (cpuWeapon <= .67) {
 if(userWeapon === null) {
   alert("Oh no, it seems that you didn't enter anything into the box!")
 }
-var compare(choice1, choice2) {
+function compare(choice1, choice2){
   if (choice1===choice2) {
     alert("It's a tie!");
+    return compare;
+    
+    
   }
   if (choice1==="rock"){
     if (choice2==="scissors"){
@@ -25,20 +28,19 @@ var compare(choice1, choice2) {
     }
   }
   if (choice1==="scissors"){
-    if(choice2==="paper){
-      alert("Scissors Win!")
+    if(choice2==="paper"){
+      alert("Scissors Win!");
     }else {
-    alert("Rock Wins!")
+    alert("Rock Wins!");
     }
   }
   if (choice1==="paper"){
-    if (choice2==="rock){
-      alert("Paper Wins!")
+    if (choice2==="rock"){
+      alert("Paper Wins!");
     }else {
       alert("Scissors Wins!");
     }
   }
 }
 compare(userWeapon, cpuWeapon);
-
 
